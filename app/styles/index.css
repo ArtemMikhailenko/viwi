@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback') layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap') layer(base);
+
+@import "tailwindcss";
+
+/* Additional styles */
+@import './additional-styles/utility-patterns.css' layer(base);
+@import './additional-styles/flatpickr.css' layer(base);
+
+@config '../../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo-text-gradient-background {
+  background-image: linear-gradient(90deg, #EEEEFA 0%, #D3D3FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.primary-button-gradient-background {
+  font-family: Inter;
+  background: radial-gradient(100% 100% at 50% 0%, #4B357C 0%, #03010D 53.1%, #14054E 100%);
+  border: 1px solid transparent;
+  margin: 2px;
+  box-shadow: 0px 1px 1.5px 0px #2116415C;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  &:hover:not(:disabled) {
+    background: radial-gradient(100% 100% at 50% 0%, #4B357C 0%, #03010D 100%);
+    box-shadow: 0px 1px 3.5px 0px #21164180;
+  }
+  &:focus {
+    border: 3px solid #7FC9FF;
+    margin: 0px;
+  }
+}
+
+.landing-registration-button {
+  background: linear-gradient(180deg, #6B6BFF 0%, #8C8CFF 100%);
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 1.5px 0px #27275F63;
+  margin: 2px;
+
+  &:hover {
+      background: linear-gradient(180deg, #5454ED 0%, #7D7DF1 100%);
+      box-shadow: 0px 1px 3.5px 0px #27275F80;
+  }
+
+  &:focus {
+      margin: 0px;
+      border: 3px solid #7FC9FF;
+  }
+}
+
+.landing-registration-button-danger {
+  background: linear-gradient(180deg, #FF5656 0%, #FF7C7C 100%);
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 1.5px 0px #5F272D63;
+  margin: 2px;
+
+  &:hover {
+      background: linear-gradient(180deg, #FF4A4A 0%, #FF6B6B 100%);
+      box-shadow: 0px 1px 1.5px 0px #5F272D63;
+  }
+
+  &:focus {
+      margin: 0px;
+      border: 3px solid #e68e8e;
+  }
+}
+
+.primary-button {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #FAFAFF;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, #6B6BFF 0%, #8C8CFF 100%);
+  box-shadow: 0px 1px 1.5px 0px #27275F63;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.primary-button:hover {
+  background: linear-gradient(180deg, #5454ED 0%, #7D7DF1 100%);
+  box-shadow: 0px 1px 3.5px 0px #27275F80;
+}
+
+.primary-button:focus {
+  border: 3px solid #7FC9FF;
+  padding: 0;
+  box-shadow: unset;
+}
+
+.primary-button.disabled,
+.primary-button.disabled:hover,
+.primary-button.disabled:focus {
+  background: linear-gradient(180deg, #6B6BFF 0%, #8C8CFF 100%);
+  box-shadow: 0px 1px 1.5px 0px #27275F63;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
