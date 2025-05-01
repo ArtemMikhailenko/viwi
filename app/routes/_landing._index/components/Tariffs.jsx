@@ -45,7 +45,7 @@ function useLoadTariffs() {
 function Tariff({ tariff, icon, highlighted, priceIsAnual }) {
     return (
         <div
-            className="flex flex-col gap-[10px] items-stretch w-[296px] p-5 pb-[34px] rounded-[12px]"
+            className="flex flex-col gap-[10px] items-stretch w-[296px] h-[482px] p-5 pb-[34px] rounded-[12px]"
             style={{
                 background: (
                     highlighted
@@ -63,7 +63,7 @@ function Tariff({ tariff, icon, highlighted, priceIsAnual }) {
                 </div>
             </div>
             <div className="w-full h-[40px] mb-1 text-3xl font-bold">
-                {numberFormatter.format(priceIsAnual ? tariff.price * 0.8 : tariff.price)} ₽<span className="text-sm font-medium">/мес</span>
+                {numberFormatter.format(priceIsAnual ? tariff.price * 0.8 : tariff.price)} ₽<span className="text-sm font-medium text-[#6F6690]">/мес</span>
             </div>
             <PrimaryLink
                 to="/registration"
@@ -71,7 +71,7 @@ function Tariff({ tariff, icon, highlighted, priceIsAnual }) {
             >
                 Подключить
             </PrimaryLink>
-            <div className="flex flex-col gap-3 w-full mt-2">
+            <div className="flex flex-col gap-3 w-full mt-2 flex-grow">
                 <div className="w-full text-xs leading-[20px] font-semibold uppercase">
                     Входит в тариф
                 </div>
@@ -98,10 +98,11 @@ export default function Tariffs() {
     const tariffs = useLoadTariffs();
 
     return (
-        <div id="tariffs" className="grid grid-cols-12 gap-y-5 pt-[50px] pb-[70px] px-5">
-            <H1 className="col-span-12 w-full text-center">Тарифы</H1>
-            <div className="col-start-3 col-span-10">
-                <div className="w-full flex flex-col gap-10">
+        <div id="tariffs" className="w-full flex justify-center pt-[50px] pb-[70px] px-5">
+            <div className="w-full max-w-[930px] flex flex-col items-center">
+                <H1 className="w-full text-center">Тарифы</H1>
+                
+                <div className="w-full flex flex-col items-center gap-10">
                     <div className="flex flex-row gap-[10px] w-[300px] h-[24px] mt-5 mb-2 text-sm leading-[22px] text-[#6F6690] font-medium">
                         <div>В месяц</div>
                         <ToggleSwitch
@@ -111,7 +112,8 @@ export default function Tariffs() {
                         />
                         <div>В год <span className="text-[#6B6BFF]">(-20%)</span></div>
                     </div>
-                    <div className="flex flex-row flex-wrap gap-5">
+                    
+                    <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 md:gap-5">
                         {tariffs ? (
                             tariffs.map((tariff, i) => (
                                 <Tariff
@@ -127,24 +129,25 @@ export default function Tariffs() {
                         )}
                     </div>
                 </div>
-            </div>
-            <div
-                className="col-span-12 md:col-start-3 md:col-span-8 w-full min-w-[430px] flex items-center justify-between gap-2 pl-[29px] p-[17px] rounded-full"
-                style={{
-                    background: 'radial-gradient(121.85% 100% at 50% 0%, #FAFAFF 0%, #D7D7FF 58.09%, #EAEAFF 100%)',
-                }}
-            >
-                <MascotIcon1 className="hidden lg:block" />
-                <div className="w-max font-semibold text-base leading-6 -tracking-[0.25px]">
-                    Индивидуальные решения, если ничего не подошло
-                </div>
-                <NavLink
-                    end
-                    to="mailto:support@videowidget.pro"
-                    className="flex flex-row gap-2 items-center primary-button-gradient-background py-2 px-4 rounded-full text-[14px] cursor-pointer"
+                
+                <div
+                    className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-2 p-4 md:p-[17px] md:pl-[29px] rounded-[20px] md:rounded-full mt-10"
+                    style={{
+                        background: 'radial-gradient(121.85% 100% at 50% 0%, #FAFAFF 0%, #D7D7FF 58.09%, #EAEAFF 100%)',
+                    }}
                 >
-                    <div className="text-gray-50">Связаться с менеджером</div>
-                </NavLink>
+                    <MascotIcon1 className="hidden lg:block" />
+                    <div className="w-full md:w-max font-semibold text-base leading-6 -tracking-[0.25px] text-center md:text-left">
+                        Индивидуальные решения, если ничего не подошло
+                    </div>
+                    <NavLink
+                        end
+                        to="mailto:support@videowidget.pro"
+                        className="flex flex-row gap-2 items-center primary-button-gradient-background py-2 px-4 rounded-full text-[14px] cursor-pointer whitespace-nowrap"
+                    >
+                        <div className="text-gray-50">Связаться с менеджером</div>
+                    </NavLink>
+                </div>
             </div>
         </div>
     )

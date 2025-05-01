@@ -106,13 +106,13 @@ function Form({ className }) {
 
     return (
         <div className={twMerge(
-            'relative w-[438px] rounded-3xl p-8 bg-[#F2F2F9]',
+            'relative w-full max-w-[438px] rounded-3xl p-4 sm:p-6 md:p-8 bg-[#F2F2F9]',
             className,
         )}>
             <div className="flex flex-col gap-4 w-full">
                 {/* Header */}
                 <div className="flex flex-row items-center gap-1">
-                    <div className="font-unbounded font-medium text-xl leading-[115%]">
+                    <div className="font-unbounded font-medium text-base sm:text-lg md:text-xl leading-[115%] break-all">
                         → help@videowidget.pro
                     </div>
                     <CopyIcon text="help@videowidget.pro" />
@@ -160,7 +160,7 @@ function Form({ className }) {
                             disabled={!confirmation || fetcher.state === 'submitting'}
                             className={twMerge(
                                 'primary-button-gradient-background',
-                                'w-full mt-1 py-[22px] rounded-[17px] font-inter font-normal text-center text-white !uppercase select-none cursor-pointer',
+                                'w-full mt-1 py-4 sm:py-5 md:py-[22px] rounded-[17px] font-inter font-normal text-center text-white !uppercase select-none cursor-pointer',
                             )}
                             tabIndex={4}
                         >
@@ -207,18 +207,21 @@ export default function Footer() {
     return (
         <div className="w-full pt-[60px]">
             <div
-                className="grid grid-cols-8 gap-y-[58px] items-center gap-[60px] w-full h-min min-h-[100dvh] pt-[80px] px-5 pb-5"
+                className="grid grid-cols-1 md:grid-cols-8 gap-y-[58px] items-center gap-[30px] md:gap-[60px] w-full h-min min-h-[100dvh] pt-[60px] md:pt-[80px] px-4 sm:px-5 pb-5"
                 style={{
                     background: 'radial-gradient(100% 100% at 50% 0%, #4B357C 0%, #03010D 53.1%, #14054E 100%)',
                 }}
             >
-                <div id="contacts" className="col-span-8 flex flex-col gap-[66px] items-center justify-center w-full">
-                    <H1 className="col-span-8 w-full lg:w-[70%] text-[#F2F2F9] text-center">
+                <div id="contacts" className="col-span-1 md:col-span-8 flex flex-col gap-[40px] md:gap-[66px] items-center justify-center w-full">
+                    <H1 className= "w-full max-w-[635px] text-[#F2F2F9] text-center text-[24px]  sm:text-[28px] md:text-[34px]    ">
                         Свяжитесь с нами, если остались вопросы
                     </H1>
-                    <Form />
+                    <div className="w-full flex justify-center px-0 sm:px-4">
+                        <Form />
+                    </div>
                 </div>
-                <div className="col-span-4 row-end2 flex flex-col gap-1.5 justify-end h-full">
+                
+                <div className="col-span-1 md:col-span-4 flex flex-col gap-1.5 justify-end h-full">
                     <div className="grow" />
                     <div className={twMerge(
                         'text-gradient',
@@ -233,8 +236,9 @@ export default function Footer() {
                         ©{new Date().getFullYear()} VideoWidget
                     </div>
                 </div>
-                <div className="col-span-4 flex flex-col justify-between gap-[50px]">
-                    <div className="flex flex-row flex-wrap gap-[100px]">
+                
+                <div className="col-span-1 md:col-span-4 flex flex-col justify-between gap-[30px] md:gap-[50px]">
+                    <div className="flex flex-row flex-wrap gap-[40px] md:gap-[100px]">
                         <Menu title="Продукт">
                             <MenuItem title="О виджете" link="#mini-video-widgets" />
                             <MenuItem title="Интеграции" link="#integrations" />
@@ -250,7 +254,8 @@ export default function Footer() {
                             <MenuItem title="Вход" link="/login" />
                         </Menu>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-between gap-4">
+                    
+                    <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-6 sm:gap-4">
                         <Menu title="чат Telegram">
                             <MenuItem
                                 title="@videovidgethelp"
@@ -259,7 +264,7 @@ export default function Footer() {
                                 target="_blank"
                             />
                         </Menu>
-                        <div className="flex flex-row flex-wrap items-end gap-3">
+                        <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-end gap-3">
                             <NavLink
                                 to={config.links.termsAndConditions}
                                 className={twMerge(

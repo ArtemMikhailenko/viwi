@@ -27,10 +27,10 @@ function LandingContent() {
         <>
             <div className="w-[100vw] h-min">
                 <Header />
-                <NavBar
+                {/* <NavBar
                     className="w-max sticky top-0 z-[999]"
                     style={{ margin: '-56px auto' }}
-                />
+                /> */}
                 <div className="flex flex-col flex-1 mt-38 lg:mt-20 overflow-y-auto overflow-x-hidden">
                     <Hero />
                     <MiniVideo />

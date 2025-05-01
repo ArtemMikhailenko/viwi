@@ -7,10 +7,10 @@ export default function Docs() {
         <>
             <div className="w-[100vw] h-min">
                 <Header />
-                <NavBar
-                    className="w-max sticky top-0 z-[999]"
+                {/* <NavBar
+                    // className="w-max sticky top-0 z-[999]"
                     style={{ margin: '-56px auto' }}
-                />
+                /> */}
                 <div className="flex flex-col flex-1 mt-38 lg:mt-20 overflow-y-auto overflow-x-hidden">
                     <div className="flex flex-col justify-center items-center w-full">
                         <div className="w-full lg:w-[800px] p-5">

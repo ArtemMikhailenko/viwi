@@ -8,65 +8,78 @@ import { CarouselItem } from "./common/Carousel";
 
 export default function MiniVideo() {
     return (
-        <div id="mini-video-widgets" className="grid grid-cols-6 pt-[50px] pb-[70px] pl-5">
-            <div className="col-start-2 col-span-5 flex flex-col gap-5">
-                <H2>мини видео любого размера</H2>
-                <div className="grid grid-cols-10 grid-rows-3 gap-10">
-                    <div className="col-span-10 row-span-1 flex flex-row gap-10">
-                        <div className="flex flex-col gap-1">
-                            <span className="font-semibold text-base">Формат:</span>
-                            <span className="flex flex-row items-center justify-center gap-1 text-base">
-                                Мини видео
-                                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="12" height="16" rx="2" fill="#2D215A" />
-                                </svg>
-                            </span>
-                        </div>
-                        {/* Videos */}
-                        <div className="flex flex-row gap-4 items-start">
-                            <div className="flex flex-col gap-2 w-[140px] p-2.5 rounded-2xl bg-[#E6E6F4]">
-                                <img src={LandingImage2} className="w-full rounded-[10px]" />
-                                <span className="text-sm leading-[120%]">
-                                    Мини видео с подписью
+        <div id="mini-video-widgets" className="pt-[50px] pb-[70px] px-5 md:pl-5 md:pr-0">
+            <div className="md:grid md:grid-cols-6">
+                <div className="md:col-start-2 md:col-span-5 flex flex-col gap-5">
+                    <H2 className="text-center md:text-left">мини видео любого размера</H2>
+                    <div className="md:grid md:grid-cols-10 md:grid-rows-3 md:gap-10">
+                        <div className="md:col-span-10 md:row-span-1 flex flex-col md:flex-row gap-5 md:gap-10 mb-8 md:mb-0 items-center md:items-start">
+                            <div className="flex flex-col gap-1 items-center md:items-start">
+                                <span className="font-semibold text-base">Формат:</span>
+                                <span className="flex flex-row items-center justify-center gap-1 text-base">
+                                    Мини видео
+                                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="12" height="16" rx="2" fill="#2D215A" />
+                                    </svg>
                                 </span>
                             </div>
-                            <div className="flex flex-col gap-2 w-[140px] p-2.5 rounded-2xl bg-[#E6E6F4]">
-                                <img src={LandingImage2} className="w-full rounded-[10px]" />
-                            </div>
-                            <div className="flex flex-col gap-2 w-[180px] p-2.5 rounded-2xl bg-[#E6E6F4]">
-                                <img
-                                    src={LandingImage2}
-                                    className="w-full h-[120px] rounded-[10px] object-cover"
-                                    style={{ objectPosition: 'top -26px left 0' }}
-                                />
+                            
+                            {/* Videos - скролл на мобильных с центрированием */}
+                            <div className="w-full overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-5 px-5 md:mx-0 md:px-0 md:w-auto md:overflow-visible pb-4 md:pb-0">
+                                <div className="flex flex-row gap-4 items-start min-w-min mx-auto md:mx-0 justify-center md:justify-start">
+                                    <div className="flex flex-col gap-2 w-[140px] p-2.5 rounded-2xl bg-[#E6E6F4] flex-shrink-0 snap-start">
+                                        <img src={LandingImage2} className="w-full rounded-[10px]" />
+                                        <span className="text-sm leading-[120%]">
+                                            Мини видео с подписью
+                                        </span>
+                                    </div>
+                                    <div className="flex flex-col gap-2 w-[140px] p-2.5 rounded-2xl bg-[#E6E6F4] flex-shrink-0 snap-start">
+                                        <img src={LandingImage2} className="w-full rounded-[10px]" />
+                                    </div>
+                                    <div className="flex flex-col gap-2 w-[180px] p-2.5 rounded-2xl bg-[#E6E6F4] flex-shrink-0 snap-start">
+                                        <img
+                                            src={LandingImage2}
+                                            className="w-full h-[120px] rounded-[10px] object-cover"
+                                            style={{ objectPosition: 'top -26px left 0' }}
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {/* Carousel */}
-                    <div className="col-span-10 row-span-2 pr-5 overflow-x-scroll">
-                        <div className="flex flex-row gap-5 w-min overflow-y-hidden">
-                            <CarouselItem text="Загружайте в виджет мини видео файлы до 1 гб">
-                                <div className="px-4 pt-4">
-                                    <img src={CarouselImage1} />
+                        
+                        {/* Carousel - вертикальная колонка на мобильных, горизонтальный скролл на десктопе */}
+                        <div className="md:col-span-10 md:row-span-2 md:overflow-x-auto md:snap-x md:snap-mandatory md:scrollbar-none md:-mx-0 md:px-0 md:pr-5 pb-4">
+                            <div className="flex flex-col md:flex-row gap-5 md:w-min md:overflow-y-hidden items-center md:items-start">
+                                <div className="w-full md:w-auto md:snap-start md:flex-shrink-0 flex justify-center md:justify-start">
+                                    <CarouselItem text="Загружайте в виджет мини видео файлы до 1 гб">
+                                        <div className="px-4 pt-4">
+                                            <img src={CarouselImage1} className="mx-auto" />
+                                        </div>
+                                    </CarouselItem>
                                 </div>
-                            </CarouselItem>
-                            <CarouselItem
-                                text="Вставляйте кнопку с ссылкой на другую страницу"
-                                className="justify-end"
-                            >
-                                <div className="px-2">
-                                    <img src={CarouselImage2} />
+                                <div className="w-full md:w-auto md:snap-start md:flex-shrink-0 flex justify-center md:justify-start">
+                                    <CarouselItem
+                                        text="Вставляйте кнопку с ссылкой на другую страницу"
+                                        className="justify-end"
+                                    >
+                                        <div className="px-2">
+                                            <img src={CarouselImage2} className="mx-auto" />
+                                        </div>
+                                    </CarouselItem>
                                 </div>
-                            </CarouselItem>
-                            <CarouselItem
-                                text="Добавляйте подзаголовок, обводку и эмодзи для оформления виджета"
-                                // className="justify-end"
-                            >
-                                <img src={CarouselImage3} />
-                            </CarouselItem>
-                            <CarouselItem text="Настраивайте условия показа: когда и где показывать виджет">
-                                <img src={CarouselImage4} />
-                            </CarouselItem>
+                                <div className="w-full md:w-auto md:snap-start md:flex-shrink-0 flex justify-center md:justify-start">
+                                    <CarouselItem
+                                        text="Добавляйте подзаголовок, обводку и эмодзи для оформления виджета"
+                                    >
+                                        <img src={CarouselImage3} className="mx-auto" />
+                                    </CarouselItem>
+                                </div>
+                                <div className="w-full md:w-auto md:snap-start md:flex-shrink-0 flex justify-center md:justify-start">
+                                    <CarouselItem text="Настраивайте условия показа: когда и где показывать виджет">
+                                        <img src={CarouselImage4} className="mx-auto" />
+                                    </CarouselItem>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
