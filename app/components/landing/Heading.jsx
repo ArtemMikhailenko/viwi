@@ -14,10 +14,21 @@ export function H1({ children, className }) {
 export function H2({ children, className }) {
     return (
         <h2 className={twMerge(
-            'text-[34px] font-unbounded font-semibold tracking-[2%] leading-[115%] uppercase',
+            'font-unbounded font-semibold tracking-[2%] leading-[115%] uppercase text-[20px] md:text-[34px]',
             className,
         )}>
             {children}
         </h2>
-    )
+    );
 }
+export function RSH2({ children, className }) {
+    return (
+        <h2 className={twMerge(
+            'font-unbounded font-semibold tracking-[2%] leading-[115%] uppercase text-[20px] md:text-[34px]',
+            className,
+        )}>
+            {children}
+        </h2>
+    );
+}
+

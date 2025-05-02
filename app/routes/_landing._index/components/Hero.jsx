@@ -15,7 +15,7 @@ export default function Hero() {
                     snap-x snap-mandatory
                     scrollbar-none
                     pb-4
-                    -mx-5 px-5
+                     px-5 sm:px-2
                 ">
                     <div className="
                         flex flex-row gap-2 items-end text-sm font-light

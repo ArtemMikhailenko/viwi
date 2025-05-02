@@ -39,7 +39,7 @@ export default function Trial() {
                             Пробный период 7 дней
                         </div>
                         <div className="text-center text-base sm:text-[20px] leading-tight sm:leading-[26px]">
-                            Попробуйте видео-виджет для вашего сайта без ограничений по функциональности на неделю
+                            Попробуйте видео-виджет для вашего сайта <br/>без ограничений по функциональности<br/> на неделю
                         </div>
                     </div>
                     <NavLink 

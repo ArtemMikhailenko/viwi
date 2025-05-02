@@ -36,10 +36,26 @@ function CopyIcon({ text }) {
     }
 
     return (
-        <svg className="cursor-pointer" onClick={copy} width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.5001 1.5415C5.221 1.5415 4.08145 1.5415 3.22581 1.97748C2.47316 2.36097 1.86124 2.97289 1.47774 3.72554C1.04177 4.58119 1.04177 5.72074 1.04177 7.99984C1.04177 10.2789 1.04177 11.4185 1.47774 12.2741C1.86124 13.0268 2.47316 13.6387 3.22581 14.0222C4.08145 14.4582 5.221 14.4582 7.5001 14.4582C9.7792 14.4582 10.9188 14.4582 11.7744 14.0222C12.527 13.6387 13.139 13.0268 13.5225 12.2741C13.9584 11.4185 13.9584 10.2789 13.9584 7.99984C13.9584 5.72074 13.9584 4.58119 13.5225 3.72554C13.139 2.97289 12.527 2.36097 11.7744 1.97748C10.9188 1.5415 9.7792 1.5415 7.5001 1.5415Z" fill="#9D9DBC" />
-            <path d="M15 6.5415V7.49984C15 10.3001 15 11.7002 14.455 12.7698C13.9757 13.7106 13.2108 14.4755 12.27 14.9549C11.2004 15.4998 9.80026 15.4998 7 15.4998H6.04177C6.04177 17.686 7.81398 19.4582 10.0001 19.4582H12.5584C14.7986 19.4582 15.9188 19.4582 16.7744 19.0222C17.527 18.6387 18.139 18.0268 18.5225 17.2741C18.9584 16.4185 18.9584 15.2984 18.9584 13.0582V10.4999C18.9584 8.31376 17.1862 6.5415 15 6.5415Z" fill="#9D9DBC" />
-        </svg>
+        <div className="relative group">
+            <svg 
+                className="cursor-pointer transition-colors" 
+                onClick={copy} 
+                width="20" 
+                height="21" 
+                viewBox="0 0 20 21" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path d="M7.5001 1.5415C5.221 1.5415 4.08145 1.5415 3.22581 1.97748C2.47316 2.36097 1.86124 2.97289 1.47774 3.72554C1.04177 4.58119 1.04177 5.72074 1.04177 7.99984C1.04177 10.2789 1.04177 11.4185 1.47774 12.2741C1.86124 13.0268 2.47316 13.6387 3.22581 14.0222C4.08145 14.4582 5.221 14.4582 7.5001 14.4582C9.7792 14.4582 10.9188 14.4582 11.7744 14.0222C12.527 13.6387 13.139 13.0268 13.5225 12.2741C13.9584 11.4185 13.9584 10.2789 13.9584 7.99984C13.9584 5.72074 13.9584 4.58119 13.5225 3.72554C13.139 2.97289 12.527 2.36097 11.7744 1.97748C10.9188 1.5415 9.7792 1.5415 7.5001 1.5415Z" fill="#9D9DBC" className="group-hover:fill-[#2d215a]" />
+                <path d="M15 6.5415V7.49984C15 10.3001 15 11.7002 14.455 12.7698C13.9757 13.7106 13.2108 14.4755 12.27 14.9549C11.2004 15.4998 9.80026 15.4998 7 15.4998H6.04177C6.04177 17.686 7.81398 19.4582 10.0001 19.4582H12.5584C14.7986 19.4582 15.9188 19.4582 16.7744 19.0222C17.527 18.6387 18.139 18.0268 18.5225 17.2741C18.9584 16.4185 18.9584 15.2984 18.9584 13.0582V10.4999C18.9584 8.31376 17.1862 6.5415 15 6.5415Z" fill="#9D9DBC" className="group-hover:fill-[#2d215a]" />
+            </svg>
+            
+            {copied && (
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-full top-0 mt-[-10px] bg-white text-[#333] py-2 px-4 rounded-lg shadow-md text-sm whitespace-nowrap z-10">
+                    Скопировано!
+                </div>
+            )}
+        </div>
     )
 }
 
@@ -207,16 +223,16 @@ export default function Footer() {
     return (
         <div className="w-full pt-[60px]">
             <div
-                className="grid grid-cols-1 md:grid-cols-8 gap-y-[58px] items-center gap-[30px] md:gap-[60px] w-full h-min min-h-[100dvh] pt-[60px] md:pt-[80px] px-4 sm:px-5 pb-5"
+                className="grid grid-cols-1 md:grid-cols-8 gap-y-[58px] items-center gap-[30px] md:gap-[60px] w-full h-min min-h-[100dvh] pt-[60px] md:pt-[80px]   pb-5"
                 style={{
                     background: 'radial-gradient(100% 100% at 50% 0%, #4B357C 0%, #03010D 53.1%, #14054E 100%)',
                 }}
             >
                 <div id="contacts" className="col-span-1 md:col-span-8 flex flex-col gap-[40px] md:gap-[66px] items-center justify-center w-full">
-                    <H1 className= "w-full max-w-[635px] text-[#F2F2F9] text-center text-[24px]  sm:text-[28px] md:text-[34px]    ">
+                    <H1 className= "w-full max-w-[635px] text-[#F2F2F9] text-center text-[24px] px-2  sm:text-[28px] md:text-[34px]    ">
                         Свяжитесь с нами, если остались вопросы
                     </H1>
-                    <div className="w-full flex justify-center px-0 sm:px-4">
+                    <div className="w-full flex justify-center">
                         <Form />
                     </div>
                 </div>

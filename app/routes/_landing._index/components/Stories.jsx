@@ -13,12 +13,12 @@ export default function Stories() {
         <div id="story-widgets" className="pt-[50px] pb-[70px] px-5 md:pl-5 md:pr-0">
             <div className="md:grid md:grid-cols-6">
                 <div className="md:col-start-2 md:col-span-5 flex flex-col gap-5">
-                    <H2 className="max-w-[670px] text-center md:text-left">Сторис для вашего сайта как в популярных сетях</H2>
+                    <H2 className="max-w-[670px] md:text-left">Сторис для вашего сайта как в популярных сетях</H2>
                     <div className="md:grid md:grid-cols-10 md:grid-rows-5 md:gap-10">
-                        <div className="md:col-span-10 md:row-span-1 flex flex-col md:flex-row gap-5 md:gap-10 mb-8 md:mb-0 items-center md:items-start">
-                            <div className="flex flex-col gap-1 items-center md:items-start">
+                        <div className="md:col-span-10 md:row-span-1 flex flex-col md:flex-row gap-5 md:gap-10 mb-8 md:mb-0 items-start">
+                            <div className="flex flex-col gap-1 items-start">
                                 <span className="font-semibold text-base">Формат:</span>
-                                <span className="flex flex-row items-center justify-center gap-1 text-base">
+                                <span className="flex flex-row  gap-1 text-base">
                                     Сторис
                                     <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="6" cy="7" r="6" fill="#2D215A" />

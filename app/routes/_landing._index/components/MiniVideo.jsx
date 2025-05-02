@@ -11,10 +11,10 @@ export default function MiniVideo() {
         <div id="mini-video-widgets" className="pt-[50px] pb-[70px] px-5 md:pl-5 md:pr-0">
             <div className="md:grid md:grid-cols-6">
                 <div className="md:col-start-2 md:col-span-5 flex flex-col gap-5">
-                    <H2 className="text-center md:text-left">мини видео любого размера</H2>
+                    <H2 className="text-left">мини видео любого размера</H2>
                     <div className="md:grid md:grid-cols-10 md:grid-rows-3 md:gap-10">
-                        <div className="md:col-span-10 md:row-span-1 flex flex-col md:flex-row gap-5 md:gap-10 mb-8 md:mb-0 items-center md:items-start">
-                            <div className="flex flex-col gap-1 items-center md:items-start">
+                        <div className="md:col-span-10 md:row-span-1 flex flex-col md:flex-row gap-5 md:gap-10 mb-8 md:mb-0  md:items-start">
+                            <div className="flex flex-col gap-1 items-start">
                                 <span className="font-semibold text-base">Формат:</span>
                                 <span className="flex flex-row items-center justify-center gap-1 text-base">
                                     Мини видео

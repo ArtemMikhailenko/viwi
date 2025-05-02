@@ -7,7 +7,7 @@ export function CarouselItem({ children, className, text }) {
             className,
         )}>
             {children}
-            <span className="text-sm leading-[120%] font-normal p-4">
+            <span className="text-sm leading-[120%] font-normal p-3">
                 {text}
             </span>
         </div>

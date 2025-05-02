@@ -119,7 +119,7 @@ export default function Integrations() {
                         className="rounded-3xl p-0.5 mb-8"
                         style={{ background: "linear-gradient(180deg, #8A8AFF 0%, #B9B9FF 100%)" }}
                     >
-                        <div className="flex flex-col gap-2 w-[170px] p-4 rounded-2xl bg-[#E6E6F4] border-2 border-[#F2F2F9]">
+                        <div className="flex flex-col gap-2 w-[170px] p-4 rounded-3xl bg-[#E6E6F4] border-2 border-[#F2F2F9]">
                             <img src={LandingImage2} className="w-full rounded-[10px]" />
                             <span className="text-center text-sm leading-[120%]">
                                 Ваш виджет
@@ -129,14 +129,14 @@ export default function Integrations() {
                     
                     {/* Стрелка вниз */}
                     <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 46.0002C15.4477 46.0002 15 45.5525 15 45.0002C15 44.4479 15.4477 44.0002 16 44.0002L16 46.0002ZM16.7071 47.7073C16.3166 48.0978 15.6834 48.0978 15.2929 47.7073L8.92893 41.3433C8.53841 40.9528 8.53841 40.3196 8.92893 39.9291C9.31946 39.5386 9.95262 39.5386 10.3431 39.9291L16 45.586L21.6569 39.9291C22.0474 39.5386 22.6805 39.5386 23.0711 39.9291C23.4616 40.3196 23.4616 40.9528 23.0711 41.3433L16.7071 47.7073ZM14 1.90735e-05L14 1.00002L18 1.00002L18 1.9073e-05L14 1.90735e-05ZM14 2.00002L14 3.00002L18 3.00002L18 2.00002L14 2.00002ZM14 4.00002L14 5.00002L18 5.00002L18 4.00002L14 4.00002ZM14 6.00002L14 7.00002L18 7.00002L18 6.00002L14 6.00002ZM14 8.00002L14 9.00002L18 9.00002L18 8.00002L14 8.00002ZM14 10L14 11L18 11L18 10L14 10ZM14 12L14 13L18 13L18 12L14 12ZM14 14L14 15L18 15L18 14L14 14ZM14 16L14 17L18 17L18 16L14 16ZM14 18L14 19L18 19L18 18L14 18ZM14 20L14 21L18 21L18 20L14 20ZM14 22L14 23L18 23L18 22L14 22ZM14 24L14 25L18 25L18 24L14 24ZM14 26L14 27L18 27L18 26L14 26ZM14 28L14 29L18 29L18 28L14 28ZM14 30L14 31L18 31L18 30L14 30ZM14 32L14 33L18 33L18 32L14 32ZM14 34L14 35L18 35L18 34L14 34ZM14 36L14 37L18 37L18 36L14 36ZM14 38L14 39L18 39L18 38L14 38ZM14 40L14 41L18 41L18 40L14 40ZM14 42L14 43L18 43L18 42L14 42ZM14 44L14 45L18 45L18 44L14 44Z" fill="url(#paint0_linear_1023_7408)" />
-                        <defs>
-                            <linearGradient id="paint0_linear_1023_7408" x1="16" y1="0" x2="16" y2="65.3271" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#8A8AFF" />
-                                <stop offset="1" stopColor="#B9B9FF" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+    <path d="M16 46.0002C15.4477 46.0002 15 45.5525 15 45.0002C15 44.4479 15.4477 44.0002 16 44.0002L16 46.0002ZM16.7071 47.7073C16.3166 48.0978 15.6834 48.0978 15.2929 47.7073L8.92893 41.3433C8.53841 40.9528 8.53841 40.3196 8.92893 39.9291C9.31946 39.5386 9.95262 39.5386 10.3431 39.9291L16 45.586L21.6569 39.9291C22.0474 39.5386 22.6805 39.5386 23.0711 39.9291C23.4616 40.3196 23.4616 40.9528 23.0711 41.3433L16.7071 47.7073ZM14 1.90735e-05L14 1.00002L18 1.00002L18 1.9073e-05L14 1.90735e-05ZM14 2.00002L14 3.00002L18 3.00002L18 2.00002L14 2.00002ZM14 4.00002L14 5.00002L18 5.00002L18 4.00002L14 4.00002ZM14 6.00002L14 7.00002L18 7.00002L18 6.00002L14 6.00002ZM14 8.00002L14 9.00002L18 9.00002L18 8.00002L14 8.00002ZM14 10L14 11L18 11L18 10L14 10ZM14 12L14 13L18 13L18 12L14 12ZM14 14L14 15L18 15L18 14L14 14ZM14 16L14 17L18 17L18 16L14 16ZM14 18L14 19L18 19L18 18L14 18ZM14 20L14 21L18 21L18 20L14 20ZM14 22L14 23L18 23L18 22L14 22ZM14 24L14 25L18 25L18 24L14 24ZM14 26L14 27L18 27L18 26L14 26ZM14 28L14 29L18 29L18 28L14 28ZM14 30L14 31L18 31L18 30L14 30ZM14 32L14 33L18 33L18 32L14 32ZM14 34L14 35L18 35L18 34L14 34ZM14 36L14 37L18 37L18 36L14 36ZM14 38L14 39L18 39L18 38L14 38ZM14 40L14 41L18 41L18 40L14 40ZM14 42L14 43L18 43L18 42L14 42ZM14 44L14 45L18 45L18 44L14 44Z" fill="url(#paint0_linear_mobile_arrow)" />
+    <defs>
+        <linearGradient id="paint0_linear_mobile_arrow" x1="16" y1="0" x2="16" y2="65.3271" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#8A8AFF" />
+            <stop offset="1" stopColor="#B9B9FF" />
+        </linearGradient>
+    </defs>
+</svg>
                 </div>
                 
                 {/* Первый ряд интеграций */}
@@ -144,7 +144,7 @@ export default function Integrations() {
                     {/* Яндекс Метрика */}
                     <div className="flex flex-col items-center">
                         <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center mb-1 shadow-sm">
-                            <img src={IntegrationsYandexImage} className="w-[60px]" alt="Яндекс Метрика" />
+                            <img src={IntegrationsYandexImage} className="w-[90px]" alt="Яндекс Метрика" />
                         </div>
                         <div className="text-sm text-center">
                             Яндекс<br />Метрика
@@ -154,7 +154,7 @@ export default function Integrations() {
                     {/* Tilda */}
                     <div className="flex flex-col items-center">
                         <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center mb-1 shadow-sm">
-                            <img src={IntegrationsTildaImage} className="w-[60px]" alt="Tilda Publishing" />
+                            <img src={IntegrationsTildaImage} className="w-[90px]" alt="Tilda Publishing" />
                         </div>
                         <div className="text-sm text-center">
                             Tilda<br />Publishing
@@ -164,7 +164,7 @@ export default function Integrations() {
                     {/* Google Analytics */}
                     <div className="flex flex-col items-center">
                         <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center mb-1 shadow-sm">
-                            <img src={IntegrationsGAImage} className="w-[60px]" alt="Google Analytics" />
+                            <img src={IntegrationsGAImage} className="w-[90px]" alt="Google Analytics" />
                         </div>
                         <div className="text-sm text-center">
                             Google<br />Analytics
@@ -177,7 +177,7 @@ export default function Integrations() {
                     {/* WordPress */}
                     <div className="flex flex-col items-center">
                         <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center mb-1 shadow-sm">
-                            <img src={IntegrationsWPImage} className="w-[60px]" alt="WordPress" />
+                            <img src={IntegrationsWPImage} className="w-[90px]" alt="WordPress" />
                         </div>
                         <div className="text-sm text-center">
                             WordPress
@@ -187,7 +187,7 @@ export default function Integrations() {
                     {/* Bitrix24 */}
                     <div className="flex flex-col items-center">
                         <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center mb-1 shadow-sm">
-                            <img src={IntegrationsB24Image} className="w-[60px]" alt="Bitrix24" />
+                            <img src={IntegrationsB24Image} className="w-[90px]" alt="Bitrix24" />
                         </div>
                         <div className="text-sm text-center">
                             Bitrix24
