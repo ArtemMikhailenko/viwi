@@ -102,120 +102,75 @@ function MobileMenu({ isOpen, setIsOpen, user }) {
     if (!isOpen) return null;
     
     return (
-        <div className="fixed inset-0 z-50 bg-white flex flex-col h-full">
-            {/* Header with close button */}
-            <div className="flex justify-end items-center p-4">
-                <button 
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 bg-gray-100 rounded-full"
-                    aria-label="Close menu"
-                >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 6L6 18" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M6 6L18 18" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                </button>
-            </div>
+        <div className="fixed py-3 bottom-0 left-0 z-50 bg-white flex flex-col h-[538px] w-[256px] rounded-tr-2xl shadow-lg">
             
             {/* Navigation links */}
-            <div className="flex-1 px-4">
-                <ul className="space-y-1">
-                    <MobileMenuLink link="/#mini-video-widgets">О виджете</MobileMenuLink>
+            <div className="flex-1 px-2 overflow-y-auto">
+                <ul className="space-y-2">
+                    <MobileMenuLink className='' link="/#mini-video-widgets">О виджете</MobileMenuLink>
                     <MobileMenuLink link="/#integrations">Интеграции</MobileMenuLink>
                     <MobileMenuLink link="/#tariffs">Тарифы</MobileMenuLink>
                     <MobileSubmenu title="Материалы">
-                        <MobileMenuLink link="#">Инструкции</MobileMenuLink>
-                        <MobileMenuLink link="#">Журнал</MobileMenuLink>
+                        <MobileMenuSubLink link="#">Инструкции</MobileMenuSubLink>
+                        <MobileMenuSubLink link="#">Журнал</MobileMenuSubLink>
                     </MobileSubmenu>
                     <MobileMenuLink link="/#contacts">Контакты</MobileMenuLink>
                 </ul>
             </div>
             
             {/* Contact info */}
-            <div className="p-4 mt-auto bg-white border-t border-gray-200">
-                <div className="space-y-4 pb-4">
-                    <a href="#" className="flex items-center gap-3 py-3">
-                        <div className="w-8 h-8 flex items-center justify-center bg-[#E6E6F4] rounded-full">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M12 12L16 10" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M12 8V12" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </div>
-                        <span className="text-[#212158] text-base">Чат Telegram</span>
+            <div className="p-1 mt-auto">
+                <div className="space-y-2">
+                    <a href="#" className="flex items-center rounded-[12px] px-[16px] py-[12px] border border-[#e6e6f4]">
+                        <span className="text-[#6f6690] text-sm">Чат Telegram</span>
                         <span className="ml-auto">
-                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#6366F1"/>
-                                <path d="M9 9L15 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M15 9L9 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9ZM9.32252 6.6442C8.44714 7.0083 6.6976 7.7619 4.07392 8.90499C3.64787 9.07442 3.42469 9.24016 3.40438 9.40223C3.37004 9.67612 3.71303 9.78397 4.1801 9.93084C4.24364 9.95082 4.30947 9.97152 4.37695 9.99346C4.83648 10.1428 5.45462 10.3176 5.77597 10.3245C6.06746 10.3308 6.3928 10.2106 6.75198 9.964C9.20337 8.30925 10.4688 7.47286 10.5482 7.45483C10.6043 7.44211 10.6819 7.42611 10.7346 7.47288C10.7872 7.51966 10.782 7.60824 10.7765 7.632C10.7425 7.77685 9.39609 9.02857 8.69934 9.67633C8.48213 9.87827 8.32806 10.0215 8.29656 10.0542C8.226 10.1275 8.1541 10.1968 8.08499 10.2635C7.65808 10.675 7.33793 10.9836 8.10271 11.4876C8.47023 11.7298 8.76432 11.9301 9.05772 12.1299C9.37813 12.3481 9.69772 12.5657 10.1112 12.8367C10.2166 12.9058 10.3172 12.9775 10.4152 13.0474C10.7881 13.3132 11.1231 13.5521 11.5369 13.514C11.7774 13.4918 12.0258 13.2657 12.152 12.5913C12.4502 10.9974 13.0362 7.54384 13.1717 6.12073C13.1835 5.99605 13.1686 5.83648 13.1566 5.76643C13.1446 5.69638 13.1196 5.59658 13.0285 5.5227C12.9207 5.4352 12.7542 5.41675 12.6798 5.41806C12.3413 5.42403 11.8219 5.60461 9.32252 6.6442Z" fill="#9D9DBC" />
+</svg>
                         </span>
                     </a>
                     
-                    <a href="mailto:help@videowidget.pro" className="flex items-center gap-3 py-3">
-                        <div className="w-8 h-8 flex items-center justify-center bg-[#E6E6F4] rounded-full">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M22 6L12 13L2 6" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </div>
-                        <span className="text-[#212158] text-base">help@videowidget.pro</span>
+                    <a href="mailto:help@videowidget.pro" className="flex items-center rounded-[12px] px-[16px] py-[12px] border border-[#e6e6f4]">
+                        
+                        <span className="text-[#6f6690] text-sm">help@videowidget.pro</span>
                         <span className="ml-auto">
-                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5H20C21.1 5 22 5.9 22 7V17C22 18.1 21.1 19 20 19H8C6.9 19 6 18.1 6 17V7C6 5.9 6.9 5 8 5Z" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M16 19V3C16 2.46957 15.7893 1.96086 15.4142 1.58579C15.0391 1.21071 14.5304 1 14 1H4C3.46957 1 2.96086 1.21071 2.58579 1.58579C2.21071 1.96086 2 2.46957 2 3V15" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5.7375 0.9375C4.05734 0.9375 3.21726 0.9375 2.57553 1.26448C2.01104 1.5521 1.5521 2.01104 1.26448 2.57553C0.9375 3.21726 0.9375 4.05734 0.9375 5.7375V7.7625C0.9375 9.44266 0.9375 10.2827 1.26448 10.9245C1.5521 11.489 2.01104 11.9479 2.57553 12.2355C3.21726 12.5625 4.05734 12.5625 5.7375 12.5625H7.7625C9.44266 12.5625 10.2827 12.5625 10.9245 12.2355C11.489 11.9479 11.9479 11.489 12.2355 10.9245C12.5625 10.2827 12.5625 9.44266 12.5625 7.7625V5.7375C12.5625 4.05734 12.5625 3.21726 12.2355 2.57553C11.9479 2.01104 11.489 1.5521 10.9245 1.26448C10.2827 0.9375 9.44266 0.9375 7.7625 0.9375H5.7375Z" fill="#9D9DBC" />
+  <path d="M13.4999 5.4375V7.1C13.4999 9.34021 13.4999 10.4603 13.0639 11.316C12.6804 12.0686 12.0685 12.6805 11.3159 13.064C10.4602 13.5 9.34012 13.5 7.09991 13.5H5.4375C5.4375 14.0225 5.4375 14.2838 5.46997 14.5027C5.66386 15.8098 6.69019 16.8361 7.99731 17.03C8.21621 17.0625 8.47747 17.0625 9 17.0625H12.2625C13.9427 17.0625 14.7827 17.0625 15.4245 16.7355C15.989 16.4479 16.4479 15.989 16.7355 15.4245C17.0625 14.7827 17.0625 13.9427 17.0625 12.2625V9.00009C17.0625 8.47748 17.0625 8.21617 17.03 7.99724C16.8361 6.69018 15.8098 5.6639 14.5028 5.46998C14.2838 5.4375 14.0225 5.4375 13.4999 5.4375Z" fill="#9D9DBC" />
+</svg>
                         </span>
                     </a>
                 </div>
-
-                {/* User actions */}
-                <div className="flex gap-4 pt-4">
-                    {user ? (
-                        <PrimaryLink
-                            to="/app"
-                            className="flex items-center justify-center py-3 px-4 text-sm font-medium w-full rounded-lg"
-                        >
-                            Панель управления
-                        </PrimaryLink>
-                    ) : (
-                        <>
-                            <SecondaryLink
-                                to="/login"
-                                className="flex-1 flex items-center justify-center py-3 px-4 text-sm font-medium bg-white rounded-lg"
-                            >
-                                Вход
-                            </SecondaryLink>
-                            <PrimaryLink
-                                to="/registration"
-                                className="flex-1 flex items-center justify-center py-3 px-4 text-sm font-medium rounded-lg"
-                            >
-                                Регистрация
-                            </PrimaryLink>
-                        </>
-                    )}
-                </div>
             </div>
-
-            {/* Bottom controls - removed since using the new bottom navigation */}
         </div>
     );
 }
-
 function MobileMenuLink({ link, children }) {
     return (
         <li>
             <NavLink
                 end
                 to={link}
-                className='block py-4 px-4 text-[#212158] text-base'
+                className='block text-[#212158] text-base rounded-[12px] px-[16px] py-[12px] bg-[#e6e6f4]'
             >
                 {children}
             </NavLink>
         </li>
     );
 }
-
+function MobileMenuSubLink({ link, children }) {
+    return (
+        <li>
+            <NavLink
+                end
+                to={link}
+                className='block py-[8px] px-[13px] text-[#212158] text-base rounded-[12px] bg-[#fafaff;]'
+            >
+                {children}
+            </NavLink>
+        </li>
+    );
+}
 function MobileSubmenu({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
     
@@ -223,7 +178,7 @@ function MobileSubmenu({ title, children }) {
         <li>
             <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className='flex items-center justify-between w-full py-4 px-4 text-[#212158] text-base'
+                className='flex items-center justify-between w-full rounded-[12px] px-[16px] py-[12px] bg-[#e6e6f4] text-[#212158] text-base'
             >
                 {title}
                 <svg 
@@ -239,7 +194,7 @@ function MobileSubmenu({ title, children }) {
             </button>
             
             {isOpen && (
-                <ul className="pl-6 space-y-1">
+                <ul className="space-y-1 pt-1">
                     {children}
                 </ul>
             )}
