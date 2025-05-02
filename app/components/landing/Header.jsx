@@ -301,30 +301,39 @@ export default function Header() {
             
             {/* Mobile bottom navigation */}
             {isMobile && (
-                <div className="fixed bottom-0 right-0 z-30  flex gap-2 items-center px-4 py-3 rounded-t-2xl">
-                    <button 
-                        className="flex items-center justify-center p-2 bg-gray-100 rounded-full"
-                        aria-label={user ? "User profile" : "User login"}
-                    >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </button>
-                    
-                    <button 
-                        onClick={() => setMobileMenuOpen(true)}
-                        className="flex items-center justify-center p-2 bg-gray-100 rounded-full"
-                        aria-label="Open menu"
-                    >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 12H21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M3 6H21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M3 18H21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
+    <div className="fixed bottom-0 right-0 z-30 flex gap-3 items-center px-4 py-3 rounded-t-2xl">
+        {/* User button with gradient background */}
+        <button 
+            className="flex items-center justify-center rounded-[42px] p-[11px] w-[44px] h-[44px] bg-gradient-to-b from-[#6b6bff] to-[#8c8cff]"
+            aria-label={user ? "User profile" : "User login"}
+        >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+        </button>
+        
+        {/* Burger menu button that changes to X when menu is open */}
+        <button 
+            onClick={() => setMobileMenuOpen(prev => !prev)}
+            className="flex items-center justify-center rounded-[14px] p-[11px] w-[44px] h-[44px] bg-[#e6e6f4]"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+            {mobileMenuOpen ? (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+            ) : (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 6H21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 18H21" stroke="#212158" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
             )}
+        </button>
+    </div>
+)}
             
             <MobileMenu isOpen={mobileMenuOpen} setIsOpen={setMobileMenuOpen} user={user} />
         </>
