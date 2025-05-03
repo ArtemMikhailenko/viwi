@@ -100,7 +100,7 @@ export default function Tariffs() {
     return (
         <div id="tariffs" className="w-full flex justify-center pt-[50px] pb-[70px] px-5">
             <div className="w-full max-w-[930px] flex flex-col items-center">
-                <H1 className="w-full text-center">Тарифы</H1>
+            <H1 className="w-full text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Тарифы</H1>
                 
                 <div className="w-full flex flex-col items-center gap-10">
                     <div className="flex flex-row gap-[10px] w-[300px] h-[24px] mt-5 mb-2 text-sm leading-[22px] text-[#6F6690] font-medium">
