@@ -1,0 +1,1 @@
+import{e as l}from"/_shared/chunk-5DB3BFS5.js";import{b as n}from"/_shared/chunk-ANPBLYM5.js";import{e as r}from"/_shared/chunk-T2CVLYEY.js";var e=r(n(),1);function i(){return(0,e.jsx)("div",{className:"flex flex-col w-full min-h-screen font-inter text-landing-primary bg-landing-wrapper overflow-x-visible",children:(0,e.jsx)(l,{})})}export{i as default};

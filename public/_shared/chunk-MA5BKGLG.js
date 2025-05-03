@@ -1,0 +1,1 @@
+import{i as o}from"/_shared/chunk-5DB3BFS5.js";import{b as n}from"/_shared/chunk-ANPBLYM5.js";import{e as t}from"/_shared/chunk-T2CVLYEY.js";var e=t(n(),1);function d({to:i,children:p,...r}){return(0,e.jsx)(o,{to:i||"/",...r,children:p||`https://videowidget.pro${i||"/"}`})}export{d as a};

@@ -1,0 +1,1 @@
+import{b as t}from"/_shared/chunk-ANPBLYM5.js";import{e}from"/_shared/chunk-T2CVLYEY.js";var f=e(t(),1);function r(){return(0,f.jsx)("div",{className:"flex items-center justify-center w-screen h-screen",children:"\u{1F937}\u200D\u2642\uFE0F"})}export{r as default};

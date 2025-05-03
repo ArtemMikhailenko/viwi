@@ -1,0 +1,1 @@
+import{a as t}from"/_shared/chunk-U5MCZEE3.js";var r=new Intl.NumberFormat(t.locale),n=new Intl.RelativeTimeFormat(t.locale,{style:"long"});function a(e){return btoa(JSON.stringify(e))}export{r as a,a as b};
