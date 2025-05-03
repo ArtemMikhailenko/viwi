@@ -5,18 +5,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "export": "remix build && remix export",
+      "build": "remix build",
+    "start": "remix-serve build",
     "predeploy": "npm run export",
     "deploy": "gh-pages -d public",
     "dev": "remix dev --port 5555",
-    "start": "remix-serve build/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
     "@mantine/core": "^7.17.0",
     "@mantine/dates": "^7.17.0",
     "@mantine/hooks": "^7.17.0",
+    "@remix-run/netlify": "^1.19.3",
     "@remix-run/node": "2.16.5",
     "@remix-run/react": "2.16.5",
     "@remix-run/serve": "2.16.5",

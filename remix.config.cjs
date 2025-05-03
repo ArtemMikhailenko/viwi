@@ -1,7 +1,7 @@
 // remix.config.cjs
 module.exports = {
-  // не указываем `appDirectory` — по умолчанию это папка "app"
-  assetsBuildDirectory: "public",
+  serverBuildTarget: "netlify",
+    assetsBuildDirectory: "public",
   publicPath: "/",
   serverBuildTarget: "static",
   // не нужно явно указывать routes(), Remix сам найдёт app/routes

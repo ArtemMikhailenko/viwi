@@ -1,0 +1,7 @@
+[build]
+  command   = "npm run build"
+  publish   = "public"        # Remix сам создаст public/ при build
+  functions = "netlify/functions"  # папка с вашими функциями
+
+[[plugins]]
+  package = "@netlify/plugin-functions-core"
